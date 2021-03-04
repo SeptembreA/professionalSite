@@ -75,7 +75,15 @@ h3 {
     letter-spacing: 2px;
     margin-bottom: 15px;
 }
-p {
+h4 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+p, ul li, input[type=submit] {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -85,6 +93,13 @@ p {
     p {
         font-size: 20px;
     }
+}
+
+ul li {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* To change selection highlight colour START */
@@ -297,7 +312,7 @@ header h2 {
 
 /* ***** ABOUT ***** */
 
-main .about {
+.about {
     background-color: var(--greige);
     display: flex;
     flex-flow: row wrap;
@@ -307,13 +322,13 @@ main .about {
 
 .about .about-images {
     width: 50%;
-    position: relative;
+    /* position: relative; */
 }
 
-.about svg {
+/* .about svg {
     position: absolute;
     top: -30%;
-}
+} */
 
 .about .about-content {
     width: 50%;
@@ -322,21 +337,46 @@ main .about {
 
 .about .bio {
     padding-right: 10%;
+    padding-top: 5px;
 }
 
 .about-content h3 {
     color: var(--red);
     text-transform: uppercase;
+    border: 0;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to left, var(--red), var(--dark-blue));
+    border-image-slice: 1;
+    padding: 0 0 20px 0;
+
 }
 
 .about-content p {
     color: var(--dark-blue);
 }
 
-.about-content hr {
+.button:hover, input[type=submit]:hover {
+    background: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
+}
+.button a p:hover, input[type=submit]:hover {
     color: var(--red);
-    width: 100%;
-    height: 1px;
+}
+
+.button p, input[type=submit] {
+    display: inline-block;
+    background: var(--red);
+    border-radius: 30px;
+    padding: 20px 30px;
+    transition: 0.5s;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button p:hover, input[type=submit]:hover {
+    background: var(--dark-blue);
+    color: var(--red);
 }
 
 /* Tablet */
@@ -352,20 +392,216 @@ main .about {
 
     .about .about-content {
         width: 100%;
-        position: absolute;
-        top: 195%;
+        /* position: absolute;
+        top: 195%; */
         background-color: var(--greige);
     }
 }
 
-@media screen and (max-width: 655px) {
+/* @media screen and (max-width: 655px) {
     .about .about-content {
         top: 175%;
     }
-}
+} */
 /* Mobile */
-@media screen and (max-width: 375px) {
+/* @media screen and (max-width: 375px) {
     .about .about-content {
         top: 145%;
     }
+} */
+
+/* ***** SKILLS ***** */
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-right: 40px;
+}
+.skills-content {
+    width: 75%;
+}
+
+.skills-header h3 {
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    padding-left: 40px;
+    border: 0;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to left, var(--dark-blue), var(--red));
+    border-image-slice: 1;
+    padding: 0 0 20px 40px;
+    width: 750px;
+}
+
+.skills-list {
+    column-count: 3;
+    padding-top: 10px;
+}
+
+.skills ul {
+    margin-top: 0;
+}
+
+.skills ul li {
+    color: var(--dark-blue);
+    list-style-type: none;
+    line-height: 1.4;
+}
+
+.skills-image {
+    width: 25%;
+    position: relative;
+}
+
+.skills-blob {
+    transform: scaleX(2.5) scaleY(2.5) !important;
+    transform-origin: 70px 380px !important;
+    position: absolute;
+    z-index: -5;
+}
+
+/* Tablet */
+@media screen and (max-width: 900px) {
+    .skills {
+        position: static;
+    }
+    .skills-content {
+        position: absolute;
+        top: 255%;
+        width: 100%;
+    }
+    .skills-blob {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 375px) {
+    .skills-content {
+        top: 295%;
+    }
+    .skills-header hr {
+        width: 100%;
+    }
+    .skills-list {
+        column-count: 1;
+    }
+}
+
+/* ***** PORTFOLIO ***** */
+.portfolio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.portfolio h3 {
+    color: var(--red);
+    text-transform: uppercase;
+    padding-left: 40px;
+    border: 0;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to left, var(--dark-blue), var(--red));
+    border-image-slice: 1;
+    padding: 0 0 20px 40px;
+    width: 750px;
+}
+
+.portfolio-pieces {
+    column-count: 2;
+    column-gap: 40px;
+    padding: 0 40px;
+    margin-top: 40px;
+}
+
+.portfolio-piece {
+    margin-bottom: 60px;
+}
+
+.portfolio-piece h4 {
+    color: var(--red);
+    text-transform: uppercase;
+}
+
+.portfolio-piece img {
+    width: 100%;
+}
+
+.portfolio .tech {
+    color: var(--red);
+    text-transform: uppercase;
+}
+
+/* ***** CONTACT ***** */
+.contact-header h3 {
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    padding-left: 40px;
+    border: 0;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to left, var(--red), var(--dark-blue));
+    border-image-slice: 1;
+    padding: 0 0 20px 40px;
+    width: 750px;
+}
+
+.contact-blob {
+    width: 50%;
+}
+
+.contact-info {
+    width: 50%;
+}
+
+form {
+    margin-left: 40px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.first-name, .last-name, .email-address, .company-name, .subject-line, .text-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-name, .last-name, .email-address, .company-name, .subject-line, .text-area {
+    width: 45%;
+}
+
+.subject-line, .text-area {
+    width: 95%;
+}
+
+.first-name, .email-address, .subject-line, .text-area {
+    margin-right: 5%;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+label p {
+    display: inline;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+span {
+    color: var(--red);
+    display: inline-block;
+}
+
+input[type=submit] {
+    border: none;
+    margin-top: 40px;
+    font-weight: 800;
 }
