@@ -165,7 +165,8 @@ header h1 {
 @media screen and (max-width: 375px) {
     header h1 {
         line-height: 1.25;
-        bottom: 55%;
+        bottom: 45%;
+        font-size: 50px;
     }
 }
 
@@ -191,7 +192,7 @@ header h2 {
 /* Mobile */
 @media screen and (max-width: 375px) {
     header h2 {
-        bottom: 70px;
+        bottom: 20%;
     }
     header h2 br {
         display: none;
@@ -227,51 +228,51 @@ header h2 {
     }
 }
 
-.linkedin-email {
+/* .linkedin-email {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     position: absolute;
     left: 50px;
     bottom: 10%;
-}
+} */
 /* Tablet */
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
     .linkedin-email {
         flex-direction: column;
         bottom: 10%;
     }
-}
+} */
 /* Mobile Landscape  */
-@media screen and (max-width: 667px) {
+/* @media screen and (max-width: 667px) {
     .linkedin-email {
         bottom: 5%;
     }
-}
+} */
 /* Mobile */
-@media screen and (max-width: 375px) {
+/* @media screen and (max-width: 375px) {
     .linkedin-email {
         bottom: 25%;
     }
-}
+} */
 
-.linkedin-email p {
+/* .linkedin-email p {
     color: var(--greige);
-}
+} */
 /* Tablet */
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
     .linkedin-email p {
         margin-top: 0;
     }
-}
+} */
 /* Mobile Landscape  */
-@media screen and (max-width: 667px) {
+/* @media screen and (max-width: 667px) {
     .linkedin-email p {
         margin-bottom: 10px;
     }
-}
+} */
 /* Mobile */
-@media screen and (max-width: 375px) {
+/* @media screen and (max-width: 375px) {
     .linkedin-email p {
         margin-top: 0;
     }
@@ -293,22 +294,22 @@ header h2 {
     text-decoration: none;
     color: var(--greige, #F1F1F2);
     margin-left: 30px;
-}
+} */
 /* Tablet */
-@media only screen and (max-width: 900px) {
+/* @media only screen and (max-width: 900px) {
     .linkedin-email a {
         margin-left: 0;
     }
-}
+} */
 /* Mobile */
-@media only screen and (max-width: 375px) {
+/* @media only screen and (max-width: 375px) {
     .linkedin-email a {
         margin-left: 0;
     }
 }
 .linkedin-email a:hover {
     text-decoration: underline;
-}
+} */
 
 /* ***** ABOUT ***** */
 
@@ -322,13 +323,8 @@ header h2 {
 
 .about .about-images {
     width: 50%;
-    /* position: relative; */
+    margin-top: 40px;
 }
-
-/* .about svg {
-    position: absolute;
-    top: -30%;
-} */
 
 .about .about-content {
     width: 50%;
@@ -338,6 +334,11 @@ header h2 {
 .about .bio {
     padding-right: 10%;
     padding-top: 5px;
+}
+
+.about .bio p {
+    line-height: 25px;
+    color: var(--dark-blue);
 }
 
 .about-content h3 {
@@ -351,21 +352,19 @@ header h2 {
 
 }
 
-.about-content p {
+.about-content a {
     color: var(--dark-blue);
+    
 }
 
-.button:hover, input[type=submit]:hover {
-    background: var(--dark-blue);
-    border: 1px solid var(--dark-blue);
-}
-.button a p:hover, input[type=submit]:hover {
-    color: var(--red);
-}
+.button {
+    margin-top: 20px;
 
-.button p, input[type=submit] {
+}
+.button, input[type=submit] {
     display: inline-block;
     background: var(--red);
+    color: var(--dark-blue);
     border-radius: 30px;
     padding: 20px 30px;
     transition: 0.5s;
@@ -374,9 +373,20 @@ header h2 {
     letter-spacing: 1px;
 }
 
-.button p:hover, input[type=submit]:hover {
+.button:hover, input[type=submit]:hover {
     background: var(--dark-blue);
     color: var(--red);
+    border: none;
+}
+
+/* Mobile */
+@media screen and (max-width: 375px) {
+    .about {
+        padding-bottom: 0;
+    }
+    .about .about-images {
+        margin-top: 0;
+    }
 }
 
 /* Tablet */
@@ -495,6 +505,7 @@ header h2 {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    margin-top: 40px;
 }
 
 .portfolio h3 {
@@ -520,6 +531,10 @@ header h2 {
     margin-bottom: 60px;
 }
 
+.portfolio-piece p {
+    color: var(--dark-blue);
+}
+
 .portfolio-piece h4 {
     color: var(--red);
     text-transform: uppercase;
@@ -533,8 +548,51 @@ header h2 {
     color: var(--red);
     text-transform: uppercase;
 }
+.portfolio-piece a {
+    text-decoration: none;
+}
+.portfolio-piece a h4 {
+    border-bottom: 2px solid var(--red);
+    display: inline-block;
+} 
+
+.portfolio-piece a h4:visited {
+    color: var(--red);
+    border-bottom: 2px solid var(--dark-blue);
+}
+
+.portfolio-piece a h4:hover {
+    color: var(--dark-blue);
+    border-bottom: 2px solid var(--dark-blue);
+}
+
+.portfolio-piece .profile-link {
+    text-decoration: none;
+}
+
+.portfolio-piece .profile-link {
+    color: var(--red);
+    border-bottom: 2px solid var(--red);
+}
+
+.portfolio-piece .profile-link:visited {
+    color: var(--dark-blue);
+    border-bottom: 2px solid var(--dark-blue);
+}
+
+.portfolio-piece .profile-link:hover {
+    color: var(--dark-blue);
+    border-bottom: 2px solid var(--dark-blue);
+}
+
+
 
 /* ***** CONTACT ***** */
+.contact-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 .contact-header h3 {
     color: var(--dark-blue);
     text-transform: uppercase;
@@ -591,8 +649,12 @@ label p {
     letter-spacing: 1px;
 }
 
-input {
+input, textarea {
     margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid var(--dark-blue);
+    color: var(--dark-blue);
 }
 
 span {
@@ -604,4 +666,40 @@ input[type=submit] {
     border: none;
     margin-top: 40px;
     font-weight: 800;
+    padding: 20px 70px;
+}
+
+/* Mobile */
+@media screen and (max-width: 375px) {
+    .contact-blob {
+        display: none;
+    }
+    .contact-info {
+        width: 100%;
+    }
+    form {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .first-name, .last-name, .email-address, .company-name, .subject-line, .text-area {
+        width: 80%;
+    }
+    input[type=submit] {
+        width: 80%;
+    }
+}
+
+footer {
+    background: var(--dark-blue);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 40px;
+}
+
+footer p {
+    color: var(--greige);
 }
