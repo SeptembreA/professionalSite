@@ -15,6 +15,21 @@
 
 <body class="container overflow-y-scroll">
   <header class="header" id="home">
+    <nav class="hamburger"role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
     <div class="header-content">
       <div class="header-blob">
         <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 271.3 176.4" version="1.1"
@@ -91,18 +106,18 @@
         </svg>
       </div>
       <div class="about-content">
-        <h3>About Septembre</h3>
+        <h3 class="underline-blue">About Septembre</h3>
         <div class="bio">
           <p>Septembre is a creative front-end web developer with an eye for design, a way with words and years of experience in the digital space. Through her work as a developer, journalist and community manager she has worked with a number of brands, organizations and publications in a variety of fields including e-commerce, marketing, public relations, fashion, beauty, lifestyle, food, alcohol, government relations and financial relations.</p>
           <p>Septembre is well-versed in a number of languages, frameworks and technologies including HTML, CSS, JavaScript, jQuery, Liquid and Bootstrap on CMSs including Wordpress, Salesforce and NationBuilder. She also has experience with Adobe Illustrator, Adobe Photoshop, Adobe InDesign, Sketch and Figma.</p>
-          <a href="assets/septembre-anderson-resume.pdf" class="button" target="_blank"><strong>Download Resume</strong></a>
+          <a href="assets/septembre-anderson-resume.pdf" class="button" target="_blank" aria-label="Link to Septembre Anderson's PDF resume"><strong>Download Resume</strong></a>
         </div>
       </div>
     </div>
     <div class="skills" id="skills">
       <div class="skills-content">
         <div class="skills-header clearfix">
-          <h3>Skills</h3>
+          <h3 class="underline-red">Skills</h3>
         </div>
         <div class="skills-list">
           <ul>
@@ -305,16 +320,16 @@
         </div>
       </div>
     </div>
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
       <div class="portfolio-content">
         <div class="portfolio-header clearfix">
-          <h3>Portfolio</h3>
+          <h3 class="underline-blue">Portfolio</h3>
         </div>
         <div class="portfolio-pieces">
           <div class="portfolio-piece">
-            <a href="https://www.yarnspirations.com/" target="_blank"><img src="assets/portfolio-y.jpg" alt="An image of the landing page for the Yarnspirations.com website"></a>
-            <a href="https://www.yarnspirations.com/" target="_blank"><h4>Yarnspirations</h4></a>
-            <p>Wireframed, designed and built web pages and web page elements including <a href="https://www.yarnspirations.com/lookbook-2018-09-fw-fashion.html" target="_blank" class="profile-link">lookbooks</a>, the <a href="https://www.yarnspirations.com/multi-color-coordinate-list.html" target="_blank" class="profile-link">Multi-color Coordinate List</a> page, menus, sub-menus, banners and graphic content including icons and illustrations.</p>
+            <a href="https://www.yarnspirations.com/" target="_blank" aria-label="Link to the Yarnspirations' website"><img src="assets/portfolio-y.jpg" alt="An image of the landing page for the Yarnspirations.com website"></a>
+            <a href="https://www.yarnspirations.com/" target="_blank" aria-label="Link to the Yarnspirations' website"><h4>Yarnspirations</h4></a>
+            <p>Wireframed, designed and built web pages and web page elements including <a href="https://www.yarnspirations.com/lookbook-2018-09-fw-fashion.html" target="_blank" class="profile-link" aria-label="Link to the lookbooks section of the Yarnspirations' website">lookbooks</a>, the <a href="https://www.yarnspirations.com/multi-color-coordinate-list.html" target="_blank" class="profile-link" aria-label="Link to the Multi-Color Coordinate List page of the Yarnspirations'">Multi-color Coordinate List</a> page, menus, sub-menus, banners and graphic content including icons and illustrations.</p>
             <p><strong class="tech">Tech:</strong> HTML5, CSS3, Bootstrap, Salesforce</p>
           </div>
           <div class="portfolio-piece">
@@ -338,13 +353,13 @@
         </div>
       </div>
     </div>
-    <div class="contact">
+    <div class="contact" id="contact">
       <div class="contact-blob">
 
       </div>
       <div class="contact-content">
         <div class="contact-header">
-          <h3>Contact Me</h3>
+          <h3 class="underline-red">Contact Me</h3>
         </div>
         <div class="contact-blob">
           <div class="aP0iDg _8wgmBA" tabindex="0"
@@ -446,6 +461,7 @@
           </div>
         </div>
         <div class="contact-info">
+          <p class="contact-text">Want to work with me? Email me at <strong class="email">me@septembreanderson.com</strong> or fill out the form below.</p>
           <form action="https://formspree.io/f/moqpoznj" method="POST">
             <div class="first-name">
               <label for="firstname"><p>First Name</p> <span>*</span></label>
@@ -475,6 +491,11 @@
 
             <input type="submit" class="button" value="Send">
           </form>
+          <div class="social-div">
+            <a href="http://www.linkedin.com/in/septembreanderson/" target="_blank" aria-label="Link to Septembre Anderson's LinkedIn profile"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            <a href="https://codepen.io/SeptembreA" target="_blank" aria-label="Link to Septembre Anderson's Codepen profile"><i class="fa fa-codepen" aria-hidden="true"></i></a>
+            <a href="https://github.com/SeptembreA" target="_blank" aria-label="Link to Septembre Anderson's Github profile"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+          </div>
         </div>
       </div>
     </div>

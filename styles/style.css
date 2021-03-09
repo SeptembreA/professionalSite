@@ -102,6 +102,22 @@ ul li {
     font-style: normal;
 }
 
+.underline-blue {
+    border: 0;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to left, var(--red), var(--dark-blue));
+    border-image-slice: 1;
+    padding: 0 0 20px 0;
+}
+
+.underline-red {
+    border: 0;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to left, var(--dark-blue), var(--red));
+    border-image-slice: 1;
+    padding: 0 0 20px 0;
+}
+
 /* To change selection highlight colour START */
 ::selection {
     background-color: rgba(248, 14, 63, 1);
@@ -131,6 +147,101 @@ ul li {
 /* To change scroll bar styling END */
 
 /* ***** HEADER ***** */
+/* Hamburger Menu START */
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 40px;
+    left: 40px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    color: var(--red);
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: var(--greige);
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: var(--dark-blue);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: var(--greige);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+    transform: none;
+}
+/* Hamburger Menu END */
+
 header {
     background-color: var(--dark-blue, #150941);
     height: 100vh;
@@ -245,11 +356,6 @@ header h2 {
 .about-content h3 {
     color: var(--red);
     text-transform: uppercase;
-    border: 0;
-    border-bottom: 5px solid;
-    border-image: linear-gradient(to left, var(--red), var(--dark-blue));
-    border-image-slice: 1;
-    padding: 0 0 20px 0;
 }
 
 .about-content a {
@@ -336,10 +442,6 @@ header h2 {
     color: var(--dark-blue);
     text-transform: uppercase;
     padding-left: 40px;
-    border: 0;
-    border-bottom: 5px solid;
-    border-image: linear-gradient(to left, var(--dark-blue), var(--red));
-    border-image-slice: 1;
     padding: 0 0 20px 40px;
     width: 750px;
 }
@@ -412,10 +514,6 @@ header h2 {
     color: var(--red);
     text-transform: uppercase;
     padding-left: 40px;
-    border: 0;
-    border-bottom: 5px solid;
-    border-image: linear-gradient(to left, var(--dark-blue), var(--red));
-    border-image-slice: 1;
     padding: 0 0 20px 40px;
     width: 750px;
 }
@@ -447,23 +545,24 @@ header h2 {
 .portfolio .tech {
     color: var(--red);
     text-transform: uppercase;
+    letter-spacing: 1.25px;
 }
 .portfolio-piece a {
     text-decoration: none;
 }
 .portfolio-piece a h4 {
-    border-bottom: 2px solid var(--red);
+    border-bottom: 3px solid var(--red);
     display: inline-block;
 } 
 
 .portfolio-piece a h4:visited {
     color: var(--red);
-    border-bottom: 2px solid var(--dark-blue);
+    border-bottom: 3px solid var(--dark-blue);
 }
 
 .portfolio-piece a h4:hover {
     color: var(--dark-blue);
-    border-bottom: 2px solid var(--dark-blue);
+    border-bottom: 3px solid var(--dark-blue);
 }
 
 .portfolio-piece .profile-link {
@@ -497,11 +596,6 @@ header h2 {
     color: var(--dark-blue);
     text-transform: uppercase;
     padding-left: 40px;
-    border: 0;
-    border-bottom: 5px solid;
-    border-image: linear-gradient(to left, var(--red), var(--dark-blue));
-    border-image-slice: 1;
-    padding: 0 0 20px 40px;
     width: 750px;
 }
 
@@ -513,8 +607,15 @@ header h2 {
     width: 50%;
 }
 
+.contact-info .contact-text {
+    font-size: 22px;
+    color: var(--dark-blue);
+}
+.contact-info .email {
+    color: var(--red);
+}
+
 form {
-    margin-left: 40px;
     margin-top: 40px;
     display: flex;
     flex-direction: row;
@@ -547,6 +648,7 @@ label p {
     display: inline;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: var(--dark-blue);
 }
 
 input, textarea {
@@ -567,6 +669,25 @@ input[type=submit] {
     margin-top: 40px;
     font-weight: 800;
     padding: 20px 70px;
+}
+
+.social-div {
+    display: flex;
+    justify-content: center;
+}
+
+i.fa {
+    font-size: 80px;
+    color: var(--red);
+    transition: 0.5s;
+}
+
+i.fa:first-child, i.fa:nth-child(2) {
+    margin-right: 30px;
+}
+
+i.fa:hover {
+    color: var(--dark-blue);
 }
 
 /* Mobile */
