@@ -110,7 +110,6 @@ ul li {
 /* To change selection highlight colour END */
 
 /* To change scroll bar styling START */
-
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -129,7 +128,6 @@ ul li {
 ::-webkit-scrollbar-thumb:hover {
     background: #920000;
 }
-
 /* To change scroll bar styling END */
 
 /* ***** HEADER ***** */
@@ -148,27 +146,6 @@ header h1 {
     left: 50px;
     bottom: 35%;
 }
-/* Tablet */
-@media screen and (max-width: 900px) {
-    header h1 {
-        line-height: 1.1;
-        bottom: 35%;
-    }
-}
-/* Mobile Landscape  */
-@media screen and (max-width: 667px) {
-    header h1 {
-        bottom: 40%;
-    }
-}
-/* Mobile */
-@media screen and (max-width: 375px) {
-    header h1 {
-        line-height: 1.25;
-        bottom: 45%;
-        font-size: 50px;
-    }
-}
 
 header h2 {
     color: var(--greige);
@@ -180,24 +157,6 @@ header h2 {
     bottom: 10%;
     font-size: 60px;
 }
-/* Tablet */
-@media screen and (max-width: 900px) {
-    header h2 {
-        left: 50px;
-        bottom: 25%;
-        text-align: left;
-        font-size: 35px;
-    }
-}
-/* Mobile */
-@media screen and (max-width: 375px) {
-    header h2 {
-        bottom: 20%;
-    }
-    header h2 br {
-        display: none;
-    }
-}
 
 .header-blob {
     width: 75%;
@@ -207,8 +166,19 @@ header h2 {
     z-index: 1;
     transform: scaleX(-1) rotate(110deg);
 }
+
 /* Tablet */
 @media screen and (max-width: 900px) {
+    header h1 {
+        line-height: 1.1;
+        bottom: 35%;
+    }
+    header h2 {
+        left: 50px;
+        bottom: 25%;
+        text-align: left;
+        font-size: 35px;
+    }
     .header-blob {
         width: 75%;
         right: -30%;
@@ -216,103 +186,34 @@ header h2 {
 }
 /* Mobile Landscape  */
 @media screen and (max-width: 667px) {
+    header h1 {
+        bottom: 40%;
+    }
     .header-blob {
         width: 65%;
     }
 }
 /* Mobile */
 @media screen and (max-width: 375px) {
+    header h1 {
+        line-height: 1.25;
+        bottom: 45%;
+        font-size: 50px;
+    }
+    header h2 {
+        bottom: 20%;
+    }
+    header h2 br {
+        display: none;
+    }
     .header-blob {
         width: 105%;
         right: -40%;
     }
 }
 
-/* .linkedin-email {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    position: absolute;
-    left: 50px;
-    bottom: 10%;
-} */
-/* Tablet */
-/* @media screen and (max-width: 900px) {
-    .linkedin-email {
-        flex-direction: column;
-        bottom: 10%;
-    }
-} */
-/* Mobile Landscape  */
-/* @media screen and (max-width: 667px) {
-    .linkedin-email {
-        bottom: 5%;
-    }
-} */
-/* Mobile */
-/* @media screen and (max-width: 375px) {
-    .linkedin-email {
-        bottom: 25%;
-    }
-} */
-
-/* .linkedin-email p {
-    color: var(--greige);
-} */
-/* Tablet */
-/* @media screen and (max-width: 900px) {
-    .linkedin-email p {
-        margin-top: 0;
-    }
-} */
-/* Mobile Landscape  */
-/* @media screen and (max-width: 667px) {
-    .linkedin-email p {
-        margin-bottom: 10px;
-    }
-} */
-/* Mobile */
-/* @media screen and (max-width: 375px) {
-    .linkedin-email p {
-        margin-top: 0;
-    }
-}
-.linkedin-email i {
-    font-size: 45px;
-    margin-right: 20px;
-    text-align: left;
-}
-.linkedin-email .fa-envelope {
-    color: var(--red);
-    font-size: 18px;
-}
-.linkedin-email .fa-linkedin-square {
-    color: var(--greige);
-    font-size: 18px;
-}
-.linkedin-email a {
-    text-decoration: none;
-    color: var(--greige, #F1F1F2);
-    margin-left: 30px;
-} */
-/* Tablet */
-/* @media only screen and (max-width: 900px) {
-    .linkedin-email a {
-        margin-left: 0;
-    }
-} */
-/* Mobile */
-/* @media only screen and (max-width: 375px) {
-    .linkedin-email a {
-        margin-left: 0;
-    }
-}
-.linkedin-email a:hover {
-    text-decoration: underline;
-} */
 
 /* ***** ABOUT ***** */
-
 .about {
     background-color: var(--greige);
     display: flex;
@@ -349,7 +250,6 @@ header h2 {
     border-image: linear-gradient(to left, var(--red), var(--dark-blue));
     border-image-slice: 1;
     padding: 0 0 20px 0;
-
 }
 
 .about-content a {
