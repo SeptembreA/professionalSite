@@ -148,6 +148,10 @@ ul li {
 
 /* ***** HEADER ***** */
 /* Hamburger Menu START */
+nav {
+    position: fixed;
+    z-index: 9999;
+}
 #menuToggle {
     display: block;
     position: relative;
@@ -156,6 +160,9 @@ ul li {
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
+    background: var(--dark-blue);
+    padding: 20px;
+    border-radius: 25px;
 }
 
 #menuToggle a {
@@ -164,14 +171,19 @@ ul li {
     transition: color 0.3s ease;
 }
 
+#menuToggle p {
+    font-size: 26px;
+    margin-bottom: 0;
+}
+
 #menuToggle a:hover {
     color: var(--red);
 }
 
 #menuToggle input {
     display: block;
-    width: 40px;
-    height: 32px;
+    width: 50px;
+    height: 50px;
     position: absolute;
     top: -7px;
     left: -5px;
@@ -220,7 +232,7 @@ ul li {
 #menu {
     position: absolute;
     width: 300px;
-    margin: -100px 0 0 -50px;
+    margin: -100px 0 0 -60px;
     padding: 50px;
     padding-top: 125px;
     background: var(--greige);
@@ -325,6 +337,49 @@ header h2 {
 
 
 /* ***** ABOUT ***** */
+.scrolltop {
+	display: none;
+	width: 100%;
+	margin: 0 auto;
+	position: fixed; 
+	bottom: 20px;
+	right: 10px;	
+}
+.scroll {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	background: #b2b2b2;
+	background :rgba(178,178,178,0.7);
+	padding: 20px;
+	text-align: center;
+	margin: 0 0 0 0;
+	cursor: pointer;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s; 		
+}
+.scroll:hover {
+	background: rgba(178,178,178,1.0);
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s; 		
+}
+.scroll:hover .fa {
+	padding-top: -10px;
+}
+.scroll .fa {
+	font-size: 30px;
+	margin-top: -5px;
+	margin-left: 1px;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s; 	
+}
+
 .about {
     background-color: var(--greige);
     display: flex;
