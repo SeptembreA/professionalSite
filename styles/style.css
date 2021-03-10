@@ -6,12 +6,17 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 :root {
     --dark-blue: #150941;
+    --transparent-blue: rgba(21, 9, 65, .5);
     --red: #F80E3F;
     --greige: #F1F1F2;
 }
 
 body {
     background: var(--greige);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -778,4 +783,16 @@ footer {
 
 footer p {
     color: var(--greige);
+}
+
+i.fa.fa-arrow-up {
+    font-size: 40px;
+    margin-right: 0;
+    background: var(--transparent-blue);
+    border-radius: 15px;
+    padding: 20px;
+    z-index: 999;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
 }
